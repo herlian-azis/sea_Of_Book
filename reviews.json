@@ -1,0 +1,32 @@
+[
+    {
+        "UserId": 1,
+        "BookId": 1,
+        "rating":9,
+        "comment":"buku bagus sekali sesuai dengan saya cari selama ini"
+      },
+      {
+        "UserId": 2,
+        "BookId": 2,
+        "rating":10,
+        "comment":"Ini buku seperti ini yang gw cari"
+      },
+      {
+        "UserId": 2,
+        "BookId": 2,
+        "rating":10,
+        "comment":"bagus buku nya dan mudah juga di download"
+      },
+      {
+        "UserId": 2,
+        "BookId": 2,
+        "rating":6,
+        "comment":"mau cari rilis selanjutnya ternyata tidak ada"
+      },
+      {
+        "UserId": 2,
+        "BookId": 2,
+        "rating":4,
+        "comment":"buku ini banyak mengandung gambar vulgar"
+      }
+]

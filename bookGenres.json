@@ -1,0 +1,26 @@
+[
+    {
+        "GendreId": 1,
+        "BookId": 1
+    },
+    {
+        "GendreId": 1,
+        "BookId": 2
+    },
+    {
+        "GendreId": 1,
+        "BookId": 3
+    },
+    {
+        "GendreId": 1,
+        "BookId": 1
+    },
+    {
+        "GendreId": 5,
+        "BookId": 2
+    },
+    {
+        "GendreId": 2,
+        "BookId": 2
+    }
+]

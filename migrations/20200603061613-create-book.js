@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       year: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       description: {
         type: Sequelize.STRING
@@ -23,7 +23,7 @@ module.exports = {
       path: {
         type: Sequelize.STRING
       },
-      username: {
+      uploadedBy: {
         type: Sequelize.STRING
       },
       createdAt: {

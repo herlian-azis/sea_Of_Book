@@ -10,10 +10,10 @@ module.exports = (sequelize, DataTypes) => {
   Book.init({
     name: DataTypes.STRING,
     publisher: DataTypes.STRING,
-    year: DataTypes.STRING,
+    year: DataTypes.INTEGER,
     description: DataTypes.STRING,
     path: DataTypes.STRING,
-    username: DataTypes.STRING
+    uploadedBy: DataTypes.STRING
   }, {sequelize});
   Book.associate = function(models) {
     // associations can be defined here

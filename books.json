@@ -5,15 +5,15 @@
         "year":2015,
         "description":"Judul: Never Too Young To Become A Billionaire Penulis: Yasa Ringgih Penerbit: Elex Media",
         "path":"www.google.com",
-        "username":"lukmanul123"
+        "uploadedBy":"lukmanul123"
     },
     {
         "name": "Merry Riana: Mimpi Sejuta Dolar",
         "publisher": "Merry Riana",
-        "year":9,
+        "year":2001,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
         "path":"www.google.com",
-        "username":"lukmanul123"
+        "uploadedBy":"lukmanul123"
     },
     {
         "name": "Think and Grow Rich",
@@ -21,15 +21,15 @@
         "year":1937,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
         "path":"www.google.com",
-        "username":"lukmanul123"
+        "uploadedBy":"lukmanul123"
     },
     {
-        "name": 1,
-        "publisher": 1,
-        "year":9,
+        "name": "buku pintar belajar",
+        "publisher": "gramedia",
+        "year": 2020,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
         "path":"www.google.com",
-        "username":"gigih11"
+        "uploadedBy":"gigih11"
     },
     {
         "name": "The Magic of Thinking Big",
@@ -37,6 +37,6 @@
         "year":1959,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
         "path":"www.google.com",
-        "username":"gigih11"
+        "uploadedBy":"gigih11"
     }
 ]

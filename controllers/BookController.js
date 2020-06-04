@@ -1,4 +1,6 @@
-const {Book} = require('../models')
+const {Book , Genre} = require('../models')
+const dirName = 'http://localhost:3000';
+
 class BookController {
   static listBooks(req,res){
     Book.findAll()
@@ -11,7 +13,13 @@ class BookController {
   }
   
   static addBook(req,res){
-    res.render('books-form')
+    Genre.findAll()
+    .then(data=>{
+      res.render('books-form',{data})
+    })
+    .catch(err=>{
+      res.send(err)
+    })
   }
 
   static addBookPost(req,res){
@@ -20,8 +28,8 @@ class BookController {
       "publisher": req.body.publisher,
       "year":req.body.year,
       "description":req.body.description,
-      "GenreId":1,
-      "path": req.body.file,
+      "GenreId":req.body.genre,
+      "path": dirName + '/books/' + req.file.path,
       "uploadedBy":"amiruljbr"
     }
     Book.create(newBook)
@@ -32,6 +40,10 @@ class BookController {
     .catch(err=>{
       res.send(err)
     })
+  }
+
+  static download(req,res){
+    res.download('./downloads/' +req.params.filename)
   }
 }
 

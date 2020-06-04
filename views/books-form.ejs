@@ -1,5 +1,5 @@
 <%- include('./partials/header', {title: 'Books Form'}) %>
-<form method="POST" action="/books/form">
+<form method="POST" action="/books/form" enctype="multipart/form-data">
   <label for="name">Title:</label><br>
   <input type="text" id="name" name="name"><br>
   <label for="publisher">Publisher:</label><br>
@@ -9,9 +9,14 @@
   <label for="description">Description:</label><br>
   <input type="text" id="description" name="description"><br>
   <label for="genre">Genre:</label><br>
-  <input type="text" id="genre" name="genre"><br>
+  <select name="genre" id="genre">
+    <option value='1000'>--Choose--</option>
+    <%for(let i=0;i<data.length-1;i++){%>
+      <option value="<%=data[i].id%>"><%=data[i].name%></option>
+    <%}%>
+  </select><br>
   <label for="file">File Book(only .pdf):</label><br>
-  <input type="file" name="fileToUpload" id="fileToUpload"><br><br><br>
+  <input type="file" name="fileUpload" id="fileUpload"><br><br><br>
   <input type="submit" value="Upload Book">
 </form>
 <%- include('./partials/footer') %>

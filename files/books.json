@@ -1,38 +1,38 @@
 [
     {
         "name": "Never Too Young To Become A Billionaire",
-        "publisher": "Yasa Singgih",
+        "publisher": "Gramedia",
         "year":2015,
-        "description":"Judul: Never Too Young To Become A Billionaire Penulis: Yasa Ringgih Penerbit: Elex Media",
+        "description":"buku yang bisa dibaca siapa saja",
         "GenreId":1,
-        "path":"www.google.com",
+        "path":"dummy1.pdf",
         "uploadedBy":"lukmanul123"
     },
     {
         "name": "Merry Riana: Mimpi Sejuta Dolar",
         "publisher": "Merry Riana",
         "year":2001,
-        "description":"buku bagus sekali sesuai dengan saya cari selama ini",
+        "description":"buku yang memotivasi kaula muda",
         "GenreId":2,
-        "path":"www.google.com",
+        "path":"dummy2.pdf",
         "uploadedBy":"lukmanul123"
     },
     {
         "name": "Think and Grow Rich",
         "publisher": "Napoleon Hill",
         "year":1937,
-        "description":"buku bagus sekali sesuai dengan saya cari selama ini",
+        "description":"buku ini menjadikan kita semua kaya",
         "GenreId":3,
-        "path":"www.google.com",
+        "path":"dummy3.pdf",
         "uploadedBy":"lukmanul123"
     },
     {
         "name": "buku pintar belajar",
         "publisher": "gramedia",
         "year": 2020,
-        "description":"buku bagus sekali sesuai dengan saya cari selama ini",
+        "description":"penulis sangat membuat anda jadi pintar",
         "GenreId":4,
-        "path":"www.google.com",
+        "path":"dummy4.pdf",
         "uploadedBy":"gigih11"
     },
     {
@@ -41,7 +41,7 @@
         "year":1959,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
         "GenreId":5,
-        "path":"www.google.com",
+        "path":"dummy5.pdf",
         "uploadedBy":"gigih11"
     }
 ]

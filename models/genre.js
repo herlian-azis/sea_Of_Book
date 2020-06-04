@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {sequelize});
   Genre.associate = function(models) {
     // associations can be defined here
-    Genre.belongsToMany(models.Book, { through: 'BookGenres' })
+    Genre.hasOne(models.Book)
   };
   return Genre;
 };

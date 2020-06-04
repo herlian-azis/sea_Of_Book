@@ -20,6 +20,9 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
+      GenreId: {
+        type: Sequelize.INTEGER
+      },
       path: {
         type: Sequelize.STRING
       },

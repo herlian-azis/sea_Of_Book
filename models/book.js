@@ -12,12 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     publisher: DataTypes.STRING,
     year: DataTypes.INTEGER,
     description: DataTypes.STRING,
+    GenreId: DataTypes.INTEGER,
     path: DataTypes.STRING,
     uploadedBy: DataTypes.STRING
   }, {sequelize});
   Book.associate = function(models) {
     // associations can be defined here
-    Book.belongsToMany(models.Genre,{through: 'BookGenres'})
+    Book.belongsTo(models.Genre)
     Book.belongsToMany(models.User,{through: 'Reviews'})
   };
   return Book;

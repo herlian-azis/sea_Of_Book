@@ -4,6 +4,7 @@
         "publisher": "Yasa Singgih",
         "year":2015,
         "description":"Judul: Never Too Young To Become A Billionaire Penulis: Yasa Ringgih Penerbit: Elex Media",
+        "GenreId":1,
         "path":"www.google.com",
         "uploadedBy":"lukmanul123"
     },
@@ -12,6 +13,7 @@
         "publisher": "Merry Riana",
         "year":2001,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
+        "GenreId":2,
         "path":"www.google.com",
         "uploadedBy":"lukmanul123"
     },
@@ -20,6 +22,7 @@
         "publisher": "Napoleon Hill",
         "year":1937,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
+        "GenreId":3,
         "path":"www.google.com",
         "uploadedBy":"lukmanul123"
     },
@@ -28,6 +31,7 @@
         "publisher": "gramedia",
         "year": 2020,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
+        "GenreId":4,
         "path":"www.google.com",
         "uploadedBy":"gigih11"
     },
@@ -36,6 +40,7 @@
         "publisher": "David J. Schwartz",
         "year":1959,
         "description":"buku bagus sekali sesuai dengan saya cari selama ini",
+        "GenreId":5,
         "path":"www.google.com",
         "uploadedBy":"gigih11"
     }

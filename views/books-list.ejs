@@ -1,0 +1,23 @@
+<%- include('./partials/header', {title: 'List Books'}) %>
+  <a href="/books/form">Add Book</a><br><br>
+
+  <table border="1">
+    <th>Name</th>
+    <th>Writer/Publisher</th>
+    <th>Realesed Year</th>
+    <th>Genre</th>
+    <th>Action</th>
+    <%for (let i in data){%>
+    <tr>
+      <td><%=data[i].name%></td>
+      <td><%=data[i].publisher%></td>
+      <td><%=data[i].year%></td>
+      <td><%=data[i].Genre.name%></td>
+      <td><a href="/books/detail/<%=data[i].id%>%>">Detail</a></td>
+    </tr>
+    <% } %>
+  </table>
+  
+</body>
+</html>
+<%- include('./partials/footer') %>

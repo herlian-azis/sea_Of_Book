@@ -1,0 +1,13 @@
+<%- include('./partials/header', {title: 'Rating Form'}) %>
+<form method="POST" action="/reviews/books/<%=BookId%>" >
+  <label for="rating">Choose Rating:</label><br>
+  <select name="rating" id="rating">
+    <%for (let i=10;i>0;i--){ %>
+    <option value="<%=i%>"><%=i%></option>
+    <% } %>
+  </select> <br>
+  <label for="comment">Comment:</label><br>
+  <input type="text" id="comment" name="comment"><br><br>
+  <input type="submit" value="Submit Review">
+</form>
+<%- include('./partials/footer') %>

@@ -27,6 +27,8 @@ routes.get('/',BookControlelr.listBooks);
 routes.get('/form',BookControlelr.addBook);
 routes.post('/form',upload.single('fileUpload'),BookControlelr.addBookPost);
 routes.get('/downloads/:filename',BookControlelr.download);
+routes.get('/detail/:id',BookControlelr.detail);
+
 
 
 module.exports = routes;

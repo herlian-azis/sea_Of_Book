@@ -1,11 +1,53 @@
-const {Book , Genre} = require('../models')
+const {Book , Genre, Review, User} = require('../models')
 const dirName = 'http://localhost:3000';
+const helperFileName = require('../helper/getFileName')
+const QRCode = require('qrcode')
 
 class BookController {
   static listBooks(req,res){
-    Book.findAll()
+    Book.findAll({
+      include:[
+        Genre
+      ]
+    })
     .then(data=>{
-      res.send(data)
+      res.render('books-list',{data})
+    })
+    .catch(err =>{
+      res.send(err)
+    })
+  }
+
+  static detail(req,res){
+    let dataBook;
+    Book.findAll({
+      where:{
+        id:req.params.id
+      },
+      include:[
+        Genre
+      ]
+    })
+    .then(data=>{
+      dataBook=data;
+      console.log(data);
+      return Review.findAll({
+          where:{
+            BookId:req.params.id
+          },
+          include:[
+            User
+          ]
+        })
+      })
+    .then(dataReview=>{
+      QRCode.toDataURL(dataBook[0].path)
+      .then(url=>{
+        res.render('books-detail',{dataBook,dataReview,helperFileName,url})
+      })
+      .catch(err =>{
+        console.log('error qr niiih')
+      })
     })
     .catch(err =>{
       res.send(err)

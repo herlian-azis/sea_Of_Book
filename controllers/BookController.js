@@ -15,7 +15,7 @@ class BookController {
   static addBook(req,res){
     Genre.findAll()
     .then(data=>{
-      res.render('books-form',{data})
+      res.render('uploadFile',{data})
     })
     .catch(err=>{
       res.send(err)

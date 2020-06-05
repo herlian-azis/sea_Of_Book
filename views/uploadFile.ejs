@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+        h1 {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+    </style>
+   <div class="col-md-6 offset-md-3 mt-5">
+    <a target="_blank" href="/home">
+      <img src='/images/online-education.svg' height="100px" >
+    </a>
+    <br>
+    <h1>Sharing Your Books For Everyone</h1>
+    <form method="POST" action="/books/form" enctype="multipart/form-data">
+     
+        <div class="form-group">
+        <label for="name">Title:</label><br>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Enter name title " required="required">
+      </div>
+      
+        <div class="form-group">
+            <label for="publisher">Publisher:</label><br>
+        <input type="text" name="publisher" class="form-control" id="publisher" placeholder="Enter name publisher" required="required">
+      </div>
+
+        <div class="form-group">
+            <label for="year">Year:</label><br>
+        <input type="text" name="year" class="form-control" id="year" placeholder="Enter year" required="required">
+      </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label><br>
+        <input type="text" name="description" class="form-control" id="description" placeholder="Enter description" required="required">
+      </div>
+
+
+      <div class="form-group">
+        <label for="genre">Favourite Platform</label>
+        <select class="form-control" id="genre" name="gendre" required="required">
+            <option value='1000'>--Choose--</option>
+            <%for(let i=0;i<data.length-1;i++){%>
+              <option value="<%=data[i].id%>"><%=data[i].name%></option>
+            <%}%>
+        </select>
+      </div>
+      <hr>
+      <div class="form-group mt-3">
+        <label for="file">File Book(only .pdf):</label><br>
+  <input type="file" name="fileUpload" id="fileUpload"><br>
+      </div>
+      <hr>
+      <center>
+
+          <button type="submit" class="btn btn-primary"  value="Upload Book" >Submit</button>
+      </center>
+    </form>
+</div> 
+
+</body>
+</html>

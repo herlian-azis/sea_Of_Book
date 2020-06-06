@@ -1,23 +1,39 @@
-<%- include('./partials/header', {title: 'List Books'}) %>
-  <a href="/books/form">Add Book</a><br><br>
+<%- include('./partials/navBarBooks', {title: 'List Books'}) %>
+  <br>
+  
+  <center>
+      <h1>List Movies</h1><br>
+      <a href="/books/form">
+          <button type="button" class="btn btn-success">Add Book</button>
+      </a>
+  </center>
+  <br>
 
-  <table border="1">
-    <th>Name</th>
-    <th>Writer/Publisher</th>
-    <th>Realesed Year</th>
-    <th>Genre</th>
-    <th>Action</th>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th >No</th>
+        <th > Name</th>
+        <th >Writer/Publisher</th>
+        <th >Realesed Year</th>
+        <th >Genre</th>
+        <th >Action</th>
+      </tr>
+    </thead>
     <%for (let i in data){%>
-    <tr>
-      <td><%=data[i].name%></td>
-      <td><%=data[i].publisher%></td>
-      <td><%=data[i].year%></td>
-      <td><%=data[i].Genre.name%></td>
-      <td><a href="/books/detail/<%=data[i].id%>%>">Detail</a></td>
-    </tr>
-    <% } %>
+      <tbody>
+
+        <tr>
+          <td class="font-weight-bold"><%=Number(i)+1%></td>
+          <td><%=data[i].name%></td>
+          <td><%=data[i].publisher%></td>
+          <td><%=data[i].year%></td>
+          <td><%=data[i].Genre.name%></td>
+          <td><a href="/books/detail/<%=data[i].id%>%>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Detail</a></td>
+        </tr>
+        <% } %>
+      </tbody>
   </table>
   
 </body>
 </html>
-<%- include('./partials/footer') %>

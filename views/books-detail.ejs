@@ -1,9 +1,13 @@
-<%- include('./partials/header', {title: 'Books Detail'}) %>
-<div>
-<img src="<%=url%>" alt="" >
-</div>
+<%- include('./partials/navBarBooks', {title: 'Books Detail'}) %>
+<center>
+  <div>
+  <img src="<%=url%>" alt="" >
+  </div>
 
-<table border="1">
+  <a href="/books/downloads/<%=helperFileName(dataBook[0].path)%>" class="btn btn-success">Download</a>
+</center>
+<br>
+<table class="table">
   <tr>
     <th>Title</th>
     <td><%=dataBook[0].name%></td>
@@ -36,25 +40,26 @@
 
    
 </table>
-
-<br>
-  <a href="/books/downloads/<%=helperFileName(dataBook[0].path)%>">Download</a>
 <br>
 
-<h2>Review From Readers</h2>
-  <a href="/reviews/books/<%=dataBook[0].id%>">Add Review</a>
+<center>
+
+  <h2>Review From Readers</h2>
+  <a href="/reviews/books/<%=dataBook[0].id%>" class="btn btn-success">Add Review</a>
+</center>
 <br><br>
-<table border="1">
-  <th>Rating</th>
-  <th>Review</th>
-  <th>Reviewed By</th>
-  <%for (let i in dataReview){%>
+<table class="table">
+  <thead class="thead-dark">
+    <th>Rating</th>
+    <th>Review</th>
+    <th>Reviewed By</th>
+    <%for (let i in dataReview){%>
+  </thead>
   <tr>
-    <td><%=dataReview[i].rating%></td>
-    <td><%=dataReview[i].comment%></td>
+    <td class="font-weight-bold"><%=dataReview[i].rating%> / 10</td>
+    <td class="font-italic"><%=dataReview[i].comment%></td>
     <td><%=dataReview[i].User.username%></td>
   </tr>
   <% } %>
 </table>
-
-<%- include('./partials/footer') %>
+</html>
